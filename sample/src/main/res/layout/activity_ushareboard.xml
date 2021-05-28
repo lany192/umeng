@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titlebar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/title_bar"
+        android:layout_marginTop="19dp"
+        android:background="@color/umeng_divide" />
+
+    <com.umeng.soexample.views.Item
+        android:id="@+id/shareboard_bottom_one"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:layout_below="@id/title_bar"
+        android:layout_marginTop="20dp"
+        app:umicon="@drawable/um_menud"
+        app:umtitle="页面底部菜单-1" />
+
+    <com.umeng.soexample.views.Item
+        android:id="@+id/shareboard_center_one"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:layout_below="@id/shareboard_bottom_one"
+        app:umicon="@drawable/um_menuc"
+        app:umtitle="页面中部菜单-1" />
+
+    <com.umeng.soexample.views.Item
+        android:id="@+id/shareboard_bottom_two"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:layout_below="@id/shareboard_center_one"
+        app:umicon="@drawable/um_menud"
+        app:umtitle="页面底部菜单-2" />
+
+    <com.umeng.soexample.views.Item
+        android:id="@+id/shareboard_center_two"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:layout_below="@id/shareboard_bottom_two"
+        app:umicon="@drawable/um_menuc"
+        app:umtitle="页面中部菜单-2" />
+
+</RelativeLayout>
