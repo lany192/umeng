@@ -1,3 +1,4 @@
+[![](https://jitpack.io/v/lany192/umeng.svg)](https://jitpack.io/#lany192/umeng)
 ### 【友盟+】统计、推送、分享三合一组件化SDK集成Demo
 
 
@@ -25,4 +26,16 @@
 #### 5. 如集成移动统计后无数据，请查看https://developer.umeng.com/docs/119267/cate/121449 
 
 #### 6. 详细升级文档，请查看：https://developer.umeng.com/docs/119267/detail/118642
+
+
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+	
+    dependencies {
+        implementation 'com.github.lany192:umeng:Tag'
+    }
 
