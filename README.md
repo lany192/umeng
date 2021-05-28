@@ -36,6 +36,6 @@
 	}
 	
     dependencies {
-        implementation 'com.github.lany192:umeng:Tag'
+        implementation 'com.github.lany192:umeng:1.0.0'
     }
 
