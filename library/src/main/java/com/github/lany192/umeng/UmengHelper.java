@@ -9,6 +9,7 @@ import com.umeng.message.IUmengRegisterCallback;
 import com.umeng.message.MsgConstant;
 import com.umeng.message.PushAgent;
 import com.umeng.message.UmengMessageHandler;
+import com.umeng.message.UmengMessageService;
 import com.umeng.message.UmengNotificationClickHandler;
 import com.umeng.socialize.PlatformConfig;
 
@@ -32,15 +33,15 @@ public class UmengHelper {
 
     public void init(Application application, Config config,
                      UmengMessageHandler messageHandler, UmengNotificationClickHandler clickHandler,
-                     Class clazz) {
+                     Class<? extends UmengMessageService> clazz) {
         //微信设置
-        PlatformConfig.setWeixin(config.getWxAppKey(),config.getWxSecret());
+        PlatformConfig.setWeixin(config.getWxAppKey(), config.getWxSecret());
         PlatformConfig.setWXFileProvider(config.getFileProvider());
         //QQ设置
-        PlatformConfig.setQQZone(config.getQqAppKey(),config.getQqSecret());
+        PlatformConfig.setQQZone(config.getQqAppKey(), config.getQqSecret());
         PlatformConfig.setQQFileProvider(config.getFileProvider());
         //微博设置
-        PlatformConfig.setSinaWeibo(config.getWbAppKey(),config.getWbSecret(), "http://sns.whalecloud.com");
+        PlatformConfig.setSinaWeibo(config.getWbAppKey(), config.getWbSecret(), "http://sns.whalecloud.com");
         PlatformConfig.setSinaFileProvider(config.getFileProvider());
         //设置LOG开关，默认为false
         UMConfigure.setLogEnabled(true);
