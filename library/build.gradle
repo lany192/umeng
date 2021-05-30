@@ -28,7 +28,7 @@ android {
 }
 
 dependencies {
-    api fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
@@ -58,7 +58,7 @@ dependencies {
     //微博官方SDK
 //    api 'com.sina.weibo.sdk:core:10.10.0:openDefaultRelease@aar'
     //微信官方依赖库
-    api 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:6.6.22'
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:6.6.22'
     //QQ官方依赖库
     api 'com.tencent.tauth:qqopensdk:3.51.2'
 }
