@@ -5,7 +5,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.2.1'
+        classpath 'com.android.tools.build:gradle:4.2.2'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
     }
 }
@@ -16,7 +16,6 @@ allprojects {
         maven { url 'https://jitpack.io' }
         google()
         mavenCentral()
-        maven { url 'https://repo1.maven.org/maven2/' }
     }
 
     tasks.withType(JavaCompile) {
