@@ -36,9 +36,9 @@
 	}
 	
     dependencies {
-        implementation 'com.github.lany192:umeng:1.0.3'
+        implementation 'com.github.lany192:umeng:1.0.4'
         //微博官方SDK
-        implementation 'com.sina.weibo.sdk:core:10.10.0:openDefaultRelease@aar'
+        implementation 'io.github.sinaweibosdk:core:11.6.0@aar'
         //微信官方依赖库
         implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:6.6.22'
     }
