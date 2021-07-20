@@ -1,14 +1,11 @@
 package com.umeng.soexample.share.views;
 
 import android.app.ProgressDialog;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentActivity;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
@@ -20,9 +17,6 @@ import com.umeng.socialize.common.ResContainer;
 import com.umeng.socialize.shareboard.SnsPlatform;
 import com.umeng.socialize.utils.SocializeUtils;
 import com.umeng.soexample.R;
-
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 import java.util.Map;
@@ -64,7 +58,7 @@ public class AuthAdapter extends BaseQuickAdapter<SnsPlatform, BaseViewHolder> {
         dialog = new ProgressDialog(activity);
     }
     @Override
-    protected void convert(@NotNull BaseViewHolder holder, SnsPlatform platform) {
+    protected void convert(BaseViewHolder holder, SnsPlatform platform) {
         boolean isAuth = UMShareAPI.get(mActivity).isAuthorize(mActivity, platform.mPlatform);
         ImageView img = holder.getView(R.id.adapter_image);
         img.setImageResource(ResContainer.getResourceId(mActivity, "drawable", platform.mIcon));

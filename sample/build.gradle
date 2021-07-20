@@ -10,15 +10,15 @@ android {
 
     defaultConfig {
         applicationId "com.umeng.soexample"
-        minSdkVersion 18
-        targetSdkVersion 31
+        minSdkVersion 21
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         //配置qq回调参数
         manifestPlaceholders = [qqappid: "101830139"]
 
         ndk { //PushSDK目前只支持4种架构
-            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86'
+            abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86'
         }
     }
 
