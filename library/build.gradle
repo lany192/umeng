@@ -60,7 +60,7 @@ dependencies {
     //QQ官方依赖库
     api 'com.tencent.tauth:qqopensdk:3.53.0'
 
-    api 'com.squareup.okhttp3:okhttp:3.2.0'
+    api 'com.squareup.okhttp3:okhttp:3.14.9'
 }
 
 afterEvaluate {
