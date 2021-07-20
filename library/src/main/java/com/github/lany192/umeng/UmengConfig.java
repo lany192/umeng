@@ -3,7 +3,7 @@ package com.github.lany192.umeng;
 /**
  * @author lyg
  */
-public class Config {
+public class UmengConfig {
     private String umengAppKey;
     private String channel;
     private String umengPushSecret;

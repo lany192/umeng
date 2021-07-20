@@ -31,23 +31,23 @@ public class UmengHelper {
         return instance;
     }
 
-    public void init(Application application, Config config,
+    public void init(Application application, UmengConfig umengConfig,
                      UmengMessageHandler messageHandler, UmengNotificationClickHandler clickHandler,
                      Class<? extends UmengMessageService> clazz) {
         //微信设置
-        PlatformConfig.setWeixin(config.getWxAppKey(), config.getWxSecret());
-        PlatformConfig.setWXFileProvider(config.getFileProvider());
+        PlatformConfig.setWeixin(umengConfig.getWxAppKey(), umengConfig.getWxSecret());
+        PlatformConfig.setWXFileProvider(umengConfig.getFileProvider());
         //QQ设置
-        PlatformConfig.setQQZone(config.getQqAppKey(), config.getQqSecret());
-        PlatformConfig.setQQFileProvider(config.getFileProvider());
+        PlatformConfig.setQQZone(umengConfig.getQqAppKey(), umengConfig.getQqSecret());
+        PlatformConfig.setQQFileProvider(umengConfig.getFileProvider());
         //微博设置
-        PlatformConfig.setSinaWeibo(config.getWbAppKey(), config.getWbSecret(), "http://sns.whalecloud.com");
-        PlatformConfig.setSinaFileProvider(config.getFileProvider());
+        PlatformConfig.setSinaWeibo(umengConfig.getWbAppKey(), umengConfig.getWbSecret(), "http://sns.whalecloud.com");
+        PlatformConfig.setSinaFileProvider(umengConfig.getFileProvider());
         //设置LOG开关，默认为false
         UMConfigure.setLogEnabled(true);
         //初始化组件化基础库, 统计SDK/推送SDK/分享SDK都必须调用此初始化接口
         //UMConfigure.init(Context context,String appkey,String channel,int deviceType,String pushSecret);
-        UMConfigure.init(application, config.getUmengAppKey(), config.getChannel(), UMConfigure.DEVICE_TYPE_PHONE, config.getUmengPushSecret());
+        UMConfigure.init(application, umengConfig.getUmengAppKey(), umengConfig.getChannel(), UMConfigure.DEVICE_TYPE_PHONE, umengConfig.getUmengPushSecret());
         //集成umeng-crash-vx.x.x.aar，则需要关闭原有统计SDK异常捕获功能
         MobclickAgent.setCatchUncaughtExceptions(false);
         //统计SDK是否支持采集在子进程中打点的自定义事件，默认不支持
