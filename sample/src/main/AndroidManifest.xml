@@ -14,11 +14,13 @@
         <!--明确引用org.apache.http.legacy库，避免QQ官方open sdk在Android 9上报错 -->
         <uses-library
             android:name="org.apache.http.legacy"
+            android:exported="true"
             android:required="false" />
         <!--demo启动页-->
         <activity
             android:name=".push.SplashTestActivity"
             android:screenOrientation="portrait"
+            android:exported="true"
             android:theme="@style/Theme_Umeng_Push_Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,61 +31,81 @@
         <!--demo界面   start-->
         <activity
             android:name="com.umeng.soexample.analytics.UFragmentStack"
+            android:exported="true"
             android:theme="@android:style/Theme.Wallpaper.NoTitleBar" />
         <activity
             android:name="com.umeng.soexample.analytics.UFragmentTabs"
+            android:exported="true"
             android:theme="@android:style/Theme.Wallpaper.NoTitleBar" />
         <activity
             android:name=".HomeActivity"
-            android:theme="@android:style/Theme.Black.NoTitleBar"/>
+            android:exported="true"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
         <activity
             android:name=".analytics.UappActivity"
-            android:theme="@android:style/Theme.Black.NoTitleBar"/>
+            android:exported="true"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
         <activity
             android:name=".push.UpushActivity"
-            android:theme="@android:style/Theme.Black.NoTitleBar"/>
+            android:exported="true"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
         <activity
             android:name=".share.UshareActivity"
-            android:theme="@android:style/Theme.Black.NoTitleBar"/>
+            android:exported="true"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
         <activity
             android:name=".share.SharePlatformActivity"
-            android:theme="@android:style/Theme.Black.NoTitleBar"/>
+            android:exported="true"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
         <activity
             android:name=".share.ShareDetailActivity"
-            android:theme="@android:style/Theme.Black.NoTitleBar"/>
+            android:exported="true"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
         <activity
             android:name=".share.ShareBoardActivity"
-            android:theme="@android:style/Theme.Black.NoTitleBar"/>
+            android:exported="true"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
         <activity
             android:name=".share.AuthActivity"
-            android:theme="@android:style/Theme.Black.NoTitleBar"/>
+            android:exported="true"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
         <activity
             android:name=".share.InfoActivity"
-            android:theme="@android:style/Theme.Black.NoTitleBar"/>
+            android:exported="true"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
         <activity
             android:name=".share.InfoDetailActivity"
-            android:theme="@android:style/Theme.Black.NoTitleBar"/>
+            android:exported="true"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
         <activity
             android:name=".share.SettingActivity"
-            android:theme="@style/myTransparent"/>
+            android:exported="true"
+            android:theme="@style/myTransparent" />
         <activity
             android:name=".analytics.Process1Activity"
+            android:exported="true"
             android:process=":process_activity_1" />
 
         <service
             android:name=".analytics.Process1Service"
+            android:exported="true"
             android:process=":process_service_1" />
         <!--demo界面  end-->
 
         <!-- push start -->
         <!-- 使用完全自定义消息来开启应用的服务进程的示例服务配置 -->
-        <service android:name=".push.MyNotificationService" />
+        <service
+            android:name=".push.MyNotificationService"
+            android:exported="true" />
 
         <service
             android:name=".push.UmengNotificationService"
+            android:exported="true"
             android:permission="android.permission.BIND_JOB_SERVICE" />
 
-        <receiver android:name=".push.NotificationBroadcast" />
+        <receiver
+            android:name=".push.NotificationBroadcast"
+            android:exported="true" />
 
         <activity
             android:name=".push.MipushTestActivity"

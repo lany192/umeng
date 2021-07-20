@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.github.lany192.umeng">
+
     <queries>
         <package android:name="com.tencent.mm" />
         <package android:name="com.tencent.mobileqq" />
@@ -10,6 +11,7 @@
         <package android:name="com.alibaba.android.rimet" />
         <package android:name="com.eg.android.AlipayGphone" />
     </queries>
+
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -31,11 +33,13 @@
 
         <activity
             android:name="com.umeng.socialize.editorpage.ShareActivity"
+            android:exported="true"
             android:excludeFromRecents="true"
             android:theme="@android:style/Theme.NoTitleBar" />
 
         <activity
             android:name="com.tencent.connect.common.AssistActivity"
+            android:exported="true"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <service
@@ -60,6 +64,7 @@
 
         <receiver
             android:name="com.taobao.accs.EventReceiver"
+            android:exported="true"
             android:process=":channel">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -78,6 +83,7 @@
 
         <receiver
             android:name="com.taobao.accs.ServiceReceiver"
+            android:exported="true"
             android:process=":channel">
             <intent-filter>
                 <action android:name="com.taobao.accs.intent.action.COMMAND" />
@@ -89,11 +95,13 @@
 
         <service
             android:name="com.taobao.accs.internal.AccsJobService"
+            android:exported="true"
             android:permission="android.permission.BIND_JOB_SERVICE"
             android:process=":channel" />
 
         <service
             android:name="com.taobao.accs.ChannelService$KernelService"
+            android:exported="true"
             android:process=":channel" />
 
         <service
