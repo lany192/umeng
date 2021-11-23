@@ -57,7 +57,7 @@ public class PushMessageHandler extends UmengMessageHandler {
                 if (Build.VERSION.SDK_INT >= 26) {
                     if (!UmengMessageHandler.isChannelSet) {
                         UmengMessageHandler.isChannelSet = true;
-                        NotificationChannel chan = new NotificationChannel(UmengMessageHandler.PRIMARY_CHANNEL,
+                        NotificationChannel chan = new NotificationChannel("1",
                                 PushAgent.getInstance(context).getNotificationChannelName(),
                                 NotificationManager.IMPORTANCE_DEFAULT);
                         NotificationManager manager = (NotificationManager) context.getSystemService(
@@ -66,7 +66,7 @@ public class PushMessageHandler extends UmengMessageHandler {
                             manager.createNotificationChannel(chan);
                         }
                     }
-                    builder = new Notification.Builder(context, UmengMessageHandler.PRIMARY_CHANNEL);
+                    builder = new Notification.Builder(context, "1");
                 } else {
                     builder = new Notification.Builder(context);
                 }

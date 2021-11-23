@@ -1,2 +1,4 @@
 include ':sample'
-include ':library'
+include ':share'
+include ':push'
+include ':analysis'

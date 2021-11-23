@@ -2,8 +2,6 @@ package com.umeng.soexample;
 
 import android.app.Application;
 
-import com.github.lany192.umeng.UmengConfig;
-import com.github.lany192.umeng.UmengHelper;
 import com.umeng.soexample.push.UmengNotificationService;
 
 public class App extends Application {

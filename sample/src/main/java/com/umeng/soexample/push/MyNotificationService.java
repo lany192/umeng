@@ -38,7 +38,7 @@ public class MyNotificationService extends Service {
         try {
             UMessage msg = new UMessage(new JSONObject(message));
             if (oldMessage != null) {
-                UTrack.getInstance(getApplicationContext()).setClearPrevMessage(true);
+//                UTrack.getInstance(getApplicationContext()).setClearPrevMessage(true);
                 UTrack.getInstance(getApplicationContext()).trackMsgDismissed(oldMessage);
             }
             showNotification(msg);
@@ -60,14 +60,14 @@ public class MyNotificationService extends Service {
         if (Build.VERSION.SDK_INT >= 26) {
             if (!UmengMessageHandler.isChannelSet) {
                 UmengMessageHandler.isChannelSet = true;
-                NotificationChannel chan = new NotificationChannel(UmengMessageHandler.PRIMARY_CHANNEL,
+                NotificationChannel chan = new NotificationChannel("1",
                         PushAgent.getInstance(this).getNotificationChannelName(),
                         NotificationManager.IMPORTANCE_DEFAULT);
                 if (manager != null) {
                     manager.createNotificationChannel(chan);
                 }
             }
-            builder = new Notification.Builder(this, UmengMessageHandler.PRIMARY_CHANNEL);
+            builder = new Notification.Builder(this, "1");
         } else {
             builder = new Notification.Builder(this);
         }
