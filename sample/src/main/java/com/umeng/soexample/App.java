@@ -2,6 +2,8 @@ package com.umeng.soexample;
 
 import android.app.Application;
 
+import com.umeng.commonsdk.UMConfigure;
+import com.umeng.commonsdk.listener.OnGetOaidListener;
 import com.umeng.soexample.push.UmengNotificationService;
 
 public class App extends Application {
@@ -20,5 +22,10 @@ public class App extends Application {
         UmengHelper.getInstance().init(this, umengConfig,
                 new PushMessageHandler(), new PushNotificationClickHandler(),
                 UmengNotificationService.class);
+        UMConfigure.getOaid(this,new OnGetOaidListener() {
+            @Override
+            public void onGetOaid(String oaid) {
+                android.util.Log.i("mob", "oaid"+oaid);
+            }});
     }
 }
