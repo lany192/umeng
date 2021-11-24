@@ -4,7 +4,7 @@ package com.umeng.soexample.push;
 import com.umeng.message.inapp.InAppMessageManager;
 import com.umeng.message.inapp.UmengSplashMessageActivity;
 
-public class SplashTestActivity extends UmengSplashMessageActivity {
+public class SplashActivity extends UmengSplashMessageActivity {
 
     @Override
     public boolean onCustomPretreatment() {
