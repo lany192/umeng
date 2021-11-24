@@ -1,4 +1,4 @@
-package com.github.lany192.share;
+package com.umeng.soexample.wxapi;
 
 import android.widget.Toast;
 

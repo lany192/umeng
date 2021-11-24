@@ -8,6 +8,7 @@ android {
         applicationId "com.umeng.soexample"
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
         //配置qq回调参数
         manifestPlaceholders = [qqappid: "101830139"]
 
@@ -49,6 +50,14 @@ dependencies {
     implementation project(path: ':push')
     implementation project(path: ':share')
     implementation 'androidx.appcompat:appcompat:1.4.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.7'
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    //微博官方SDK https://github.com/sinaweibosdk/weibo_android_sdk
+    implementation 'io.github.sinaweibosdk:core:11.11.2@aar'
+    //微信官方依赖库
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android:6.8.0'
+    //QQ官方依赖库
+    implementation 'com.tencent.tauth:qqopensdk:3.53.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.14.9'
 }
