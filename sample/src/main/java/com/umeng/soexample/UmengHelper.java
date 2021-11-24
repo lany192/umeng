@@ -12,6 +12,7 @@ import com.umeng.message.PushAgent;
 import com.umeng.message.UmengMessageHandler;
 import com.umeng.message.UmengMessageService;
 import com.umeng.message.UmengNotificationClickHandler;
+import com.umeng.message.api.UPushRegisterCallback;
 import com.umeng.socialize.PlatformConfig;
 
 public class UmengHelper {
@@ -109,7 +110,7 @@ public class UmengHelper {
         pushAgent.setNotificationClickHandler(clickHandler);
 
         //注册推送服务 每次调用register都会回调该接口
-        pushAgent.register(new IUmengRegisterCallback() {
+        pushAgent.register(new UPushRegisterCallback() {
             @Override
             public void onSuccess(String deviceToken) {
                 Log.i(TAG, "device token: " + deviceToken);

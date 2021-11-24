@@ -22,10 +22,11 @@ public class App extends Application {
         UmengHelper.getInstance().init(this, umengConfig,
                 new PushMessageHandler(), new PushNotificationClickHandler(),
                 UmengNotificationService.class);
-        UMConfigure.getOaid(this,new OnGetOaidListener() {
+        UMConfigure.getOaid(this, new OnGetOaidListener() {
             @Override
             public void onGetOaid(String oaid) {
-                android.util.Log.i("mob", "oaid"+oaid);
-            }});
+                android.util.Log.i("mob", "oaid==" + oaid);
+            }
+        });
     }
 }
