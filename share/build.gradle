@@ -41,12 +41,12 @@ dependencies {
     api 'com.umeng.umsdk:share-wx:7.1.7'
     api 'com.umeng.umsdk:share-sina:7.1.7'
     //微博官方SDK https://github.com/sinaweibosdk/weibo_android_sdk
-    api 'io.github.sinaweibosdk:core:11.11.2@aar'
+    implementation 'io.github.sinaweibosdk:core:11.11.2'
     //微信官方依赖库
-    api 'com.tencent.mm.opensdk:wechat-sdk-android:6.8.0'
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android:6.8.0'
     //QQ官方依赖库
-    api 'com.tencent.tauth:qqopensdk:3.53.0'
-    api 'com.squareup.okhttp3:okhttp:3.14.9'
+    implementation 'com.tencent.tauth:qqopensdk:3.53.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.14.9'
 }
 
 afterEvaluate {

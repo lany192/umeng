@@ -13,10 +13,10 @@ https://developer.umeng.com/docs/119267/detail/182050
 	
     dependencies {
         //友盟统计（必选）
-        implementation 'com.github.lany192.umeng:analysis:+'
+        implementation 'com.github.lany192.umeng:analysis:1.0.6'
         //友盟推送（可选）
-        implementation 'com.github.lany192.umeng:push:+'
+        implementation 'com.github.lany192.umeng:push:1.0.6'
         //友盟分享（可选）
-        implementation 'com.github.lany192.umeng:share:+'
+        implementation 'com.github.lany192.umeng:share:1.0.6'
     }
 
