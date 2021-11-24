@@ -1,17 +1,11 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 31
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-
+    compileSdk rootProject.ext.compileSdkVersion
     defaultConfig {
+        minSdk rootProject.ext.minSdkVersion
+        targetSdk rootProject.ext.targetSdkVersion
         applicationId "com.umeng.soexample"
-        minSdkVersion 21
-        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         //配置qq回调参数
@@ -20,6 +14,10 @@ android {
         ndk { //PushSDK目前只支持4种架构
             abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86'
         }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     signingConfigs {

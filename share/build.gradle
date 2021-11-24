@@ -4,11 +4,10 @@ plugins {
 }
 
 android {
-    compileSdk 31
-
+    compileSdk rootProject.ext.compileSdkVersion
     defaultConfig {
-        minSdk 16
-        targetSdk 31
+        minSdk rootProject.ext.minSdkVersion
+        targetSdk rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
 
@@ -41,7 +40,7 @@ dependencies {
     api 'com.umeng.umsdk:share-wx:7.1.7'
     api 'com.umeng.umsdk:share-sina:7.1.7'
     //微博官方SDK https://github.com/sinaweibosdk/weibo_android_sdk
-    implementation 'io.github.sinaweibosdk:core:11.11.2'
+    implementation 'io.github.sinaweibosdk:core:11.11.2@aar'
     //微信官方依赖库
     implementation 'com.tencent.mm.opensdk:wechat-sdk-android:6.8.0'
     //QQ官方依赖库
