@@ -1,5 +1,4 @@
-package com.umeng.soexample.wxapi;
-
+package com.github.lany192.share;
 
 import android.widget.Toast;
 
@@ -8,6 +7,7 @@ import com.tencent.mm.opensdk.modelbase.BaseResp;
 import com.umeng.socialize.weixin.view.WXCallbackActivity;
 
 public class WXEntryActivity extends WXCallbackActivity {
+
     @Override
     public void onResp(BaseResp resp) {
         if (resp.getType() == ConstantsAPI.COMMAND_PAY_BY_WX) {
